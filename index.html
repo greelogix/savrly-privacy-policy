@@ -1,0 +1,653 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Savrly Privacy Policy</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --primary: #FF3B1F;
+      --primary-glow: rgba(255, 59, 31, 0.15);
+      --primary-dark: #0F1011;
+      --accent: #1FC497;
+      --background: #FAFAFB;
+      --card: #FFFFFF;
+      --text: #111827;
+      --subtext: #4B5563;
+      --muted: #9CA3AF;
+      --border: #E5E7EB;
+      --shadow-sm: 0 2px 8px rgba(0,0,0,0.04);
+      --shadow-md: 0 12px 30px rgba(0,0,0,0.06);
+      --radius-sm: 12px;
+      --radius-md: 20px;
+      --radius-lg: 32px;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background: var(--background);
+      color: var(--text);
+      line-height: 1.7;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* --- HERO SECTION --- */
+    .hero {
+      background: var(--primary-dark);
+      color: white;
+      padding: 120px 20px 180px;
+      position: relative;
+      overflow: hidden;
+      text-align: center;
+    }
+
+    .hero-pattern {
+      position: absolute;
+      inset: 0;
+      background-image: radial-gradient(rgba(255, 255, 255, 0.1) 1px, transparent 1px);
+      background-size: 24px 24px;
+      opacity: 0.3;
+      pointer-events: none;
+    }
+
+    .hero::before {
+      content: "";
+      position: absolute;
+      width: 600px;
+      height: 600px;
+      background: radial-gradient(circle, rgba(255, 59, 31, 0.15) 0%, transparent 70%);
+      top: -250px;
+      left: 50%;
+      transform: translateX(-50%);
+      filter: blur(40px);
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 2;
+      max-width: 800px;
+      margin: auto;
+    }
+
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(255,255,255,0.06);
+      border: 1px solid rgba(255,255,255,0.1);
+      padding: 8px 16px;
+      border-radius: 999px;
+      font-size: 13px;
+      font-weight: 500;
+      letter-spacing: 0.5px;
+      margin-bottom: 24px;
+      backdrop-filter: blur(8px);
+      color: rgba(255, 255, 255, 0.9);
+    }
+
+    .hero h1 {
+      font-size: 54px;
+      font-weight: 800;
+      line-height: 1.15;
+      margin-bottom: 20px;
+      letter-spacing: -1.5px;
+    }
+
+    .hero p {
+      max-width: 640px;
+      margin: 0 auto;
+      color: rgba(255,255,255,0.7);
+      font-size: 18px;
+    }
+
+    /* --- LAYOUT CONTAINER --- */
+    .main-container {
+      max-width: 1240px;
+      margin: -100px auto 100px;
+      padding: 0 24px;
+      display: grid;
+      grid-template-columns: 280px 1fr;
+      gap: 48px;
+      position: relative;
+      z-index: 10;
+    }
+
+    /* --- STICKY SIDEBAR --- */
+    .sidebar {
+      position: sticky;
+      top: 40px;
+      height: fit-content;
+    }
+
+    .nav-card {
+      background: var(--card);
+      border-radius: var(--radius-md);
+      padding: 24px;
+      box-shadow: var(--shadow-sm);
+      border: 1px solid var(--border);
+    }
+
+    .nav-card h4 {
+      font-size: 12px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color: var(--muted);
+      margin-bottom: 16px;
+    }
+
+    .nav-links {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+    }
+
+    .nav-links a {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      color: var(--subtext);
+      text-decoration: none;
+      font-size: 14px;
+      font-weight: 500;
+      padding: 10px 12px;
+      border-radius: var(--radius-sm);
+      transition: all 0.2s ease;
+    }
+
+    .nav-links a:hover {
+      background: var(--background);
+      color: var(--text);
+    }
+
+    .nav-links a .num {
+      font-size: 11px;
+      font-weight: 700;
+      background: #F3F4F6;
+      color: var(--subtext);
+      width: 22px;
+      height: 22px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 6px;
+    }
+
+    /* --- MAIN CONTENT CARD --- */
+    .policy-card {
+      background: var(--card);
+      border-radius: var(--radius-lg);
+      padding: 60px;
+      box-shadow: var(--shadow-md);
+      border: 1px solid rgba(0,0,0,0.02);
+    }
+
+    .top-meta {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 20px;
+      margin-bottom: 48px;
+    }
+
+    .meta-box {
+      background: var(--background);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-md);
+      padding: 20px 24px;
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+    }
+
+    .meta-title {
+      font-size: 11px;
+      font-weight: 700;
+      color: var(--muted);
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    .meta-value {
+      font-size: 16px;
+      font-weight: 600;
+      color: var(--text);
+    }
+
+    .highlight {
+      background: linear-gradient(135deg, rgba(255,59,31,0.04) 0%, rgba(31,196,151,0.02) 100%);
+      border-left: 4px solid var(--primary);
+      padding: 24px 32px;
+      border-radius: 0 var(--radius-md) var(--radius-md) 0;
+      margin-bottom: 56px;
+      font-size: 16px;
+      color: var(--subtext);
+    }
+
+    .highlight strong {
+      color: var(--text);
+    }
+
+    /* --- SECTIONS --- */
+    .section {
+      margin-bottom: 56px;
+      padding-top: 24px;
+      border-top: 1px solid #F3F4F6;
+    }
+    
+    .section:first-of-type {
+      border-top: none;
+      padding-top: 0;
+    }
+
+    .section h2 {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      font-size: 26px;
+      font-weight: 800;
+      margin-bottom: 24px;
+      color: var(--primary-dark);
+      letter-spacing: -0.5px;
+    }
+
+    .section-number {
+      font-size: 14px;
+      font-weight: 800;
+      color: var(--primary);
+      background: var(--primary-glow);
+      padding: 4px 12px;
+      border-radius: 8px;
+    }
+
+    .section p {
+      color: var(--subtext);
+      font-size: 16px;
+      margin-bottom: 24px;
+    }
+
+    /* GRID LISTS */
+    .data-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 16px;
+      list-style: none;
+      margin-bottom: 24px;
+    }
+
+    .data-grid li {
+      background: var(--background);
+      border: 1px solid #F1F2F4;
+      padding: 16px 20px;
+      border-radius: var(--radius-sm);
+      font-size: 15px;
+      font-weight: 500;
+      color: var(--text);
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .data-grid li::before {
+      content: "✦";
+      color: var(--accent);
+      font-weight: bold;
+    }
+
+    /* EXCLUSIONS BAR */
+    .alert-banner {
+      background: #FFFBEB;
+      border: 1px solid #FEF3C7;
+      padding: 20px 24px;
+      border-radius: var(--radius-md);
+      color: #92400E;
+      font-weight: 600;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    /* --- CONTACT BOX --- */
+    .contact-box {
+      background: var(--primary-dark);
+      border-radius: var(--radius-md);
+      padding: 40px;
+      color: white;
+      margin-top: 64px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .contact-box::after {
+      content: "";
+      position: absolute;
+      bottom: -50px;
+      right: -50px;
+      width: 180px;
+      height: 180px;
+      background: var(--primary);
+      opacity: 0.15;
+      border-radius: 50%;
+      filter: blur(30px);
+    }
+
+    .contact-box h3 {
+      font-size: 24px;
+      font-weight: 700;
+      margin-bottom: 12px;
+      letter-spacing: -0.5px;
+    }
+
+    .contact-box p {
+      color: rgba(255,255,255,0.65);
+      margin-bottom: 28px;
+      font-size: 15px;
+    }
+
+    .contact-methods {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 16px;
+    }
+
+    .contact-method {
+      background: rgba(255,255,255,0.04);
+      border: 1px solid rgba(255,255,255,0.08);
+      padding: 16px 20px;
+      border-radius: var(--radius-sm);
+      text-decoration: none;
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+      transition: all 0.2s ease;
+    }
+
+    .contact-method:hover {
+      background: rgba(255,255,255,0.08);
+      border-color: rgba(255,255,255,0.15);
+    }
+
+    .contact-label {
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      color: rgba(255,255,255,0.4);
+      font-weight: 600;
+    }
+
+    .contact-value {
+      color: var(--accent);
+      font-weight: 600;
+      font-size: 15px;
+    }
+
+    /* --- FOOTER --- */
+    .footer {
+      text-align: center;
+      padding: 60px 20px;
+      color: var(--muted);
+      font-size: 14px;
+      border-top: 1px solid var(--border);
+      background: white;
+    }
+
+    /* --- BACK TO TOP BUTTON --- */
+    .floating-button {
+      position: fixed;
+      right: 32px;
+      bottom: 32px;
+      width: 48px;
+      height: 48px;
+      border-radius: 50%;
+      border: 1px solid var(--border);
+      background: var(--card);
+      color: var(--text);
+      font-size: 16px;
+      font-weight: 600;
+      cursor: pointer;
+      box-shadow: var(--shadow-sm);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: all 0.2s ease;
+      z-index: 99;
+    }
+
+    .floating-button:hover {
+      transform: translateY(-2px);
+      box-shadow: var(--shadow-md);
+      border-color: var(--muted);
+    }
+
+    /* --- RESPONSIVE DESIGN --- */
+    @media (max-width: 1024px) {
+      .main-container {
+        grid-template-columns: 1fr;
+        gap: 32px;
+        margin-top: -60px;
+      }
+      .sidebar {
+        display: none; /* Hide sticky index side panel on tablets/mobile */
+      }
+    }
+
+    @media (max-width: 768px) {
+      .hero {
+        padding: 80px 20px 140px;
+      }
+      .hero h1 {
+        font-size: 38px;
+      }
+      .policy-card {
+        padding: 32px 24px;
+        border-radius: var(--radius-md);
+      }
+      .top-meta {
+        grid-template-columns: 1fr;
+        gap: 12px;
+      }
+      .data-grid {
+        grid-template-columns: 1fr;
+      }
+      .contact-methods {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <section class="hero">
+    <div class="hero-pattern"></div>
+    <div class="hero-content">
+      <div class="badge">
+        🔒 Privacy & Data Protection
+      </div>
+      <h1>Savrly Privacy Policy</h1>
+      <p>
+        Your privacy matters to us. This Privacy Policy explains how Savrly
+        collects, uses, protects, and manages your information across our
+        platform, services, and restaurant discovery experiences.
+      </p>
+    </div>
+  </section>
+
+  <main class="main-container">
+    
+    <aside class="sidebar">
+      <div class="nav-card">
+        <h4>On this page</h4>
+        <ul class="nav-links">
+          <li><a href="#sec-1"><span class="num">1</span> Collection</a></li>
+          <li><a href="#sec-2"><span class="num">2</span> Usage</a></li>
+          <li><a href="#sec-3"><span class="num">3</span> Tracking</a></li>
+          <li><a href="#sec-4"><span class="num">4</span> Sharing</a></li>
+          <li><a href="#sec-5"><span class="num">5</span> Public Media</a></li>
+          <li><a href="#sec-6"><span class="num">6</span> Your Rights</a></li>
+          <li><a href="#sec-7"><span class="num">7</span> Security</a></li>
+          <li><a href="#sec-8"><span class="num">8</span> Minors</a></li>
+          <li><a href="#sec-9"><span class="num">9</span> Updates</a></li>
+        </ul>
+      </div>
+    </aside>
+
+    <div class="policy-card">
+
+      <div class="top-meta">
+        <div class="meta-box">
+          <span class="meta-title">Effective Date</span>
+          <span class="meta-value">April 8th, 2025</span>
+        </div>
+        <div class="meta-box">
+          <span class="meta-title">Last Updated</span>
+          <span class="meta-value">November 13, 2025</span>
+        </div>
+      </div>
+
+      <div class="highlight">
+        <strong>Savrly, Inc.</strong> (“Savrly”, “we”, “our”, or “us”) is committed
+        to protecting your privacy. This Privacy Policy explains how we collect,
+        use, disclose, and safeguard your information when you use our mobile
+        application, website, and related services.
+      </div>
+
+      <section class="section" id="sec-1">
+        <h2><span class="section-number">01</span> Information We Collect</h2>
+        <p>
+          We may collect personal information that you provide directly to us,
+          information collected automatically through your device, and data from
+          trusted third-party services.
+        </p>
+        <ul class="data-grid">
+          <li>Name, email, & phone credentials</li>
+          <li>Profile avatars & taste profile metrics</li>
+          <li>Reviews, pictures, & restaurant ratings</li>
+          <li>Real-time or zip code geolocation</li>
+          <li>Device diagnostic metrics & analytics</li>
+          <li>Standard browser cookie metrics</li>
+        </ul>
+      </section>
+
+      <section class="section" id="sec-2">
+        <h2><span class="section-number">02</span> How We Use Your Information</h2>
+        <p>
+          Savrly uses your information to personalize your experience, improve
+          our services, recommend restaurants and events, and provide support.
+        </p>
+        <ul class="data-grid">
+          <li>Personalized recommendations</li>
+          <li>Performance optimizations</li>
+          <li>Transaction & marketing alerts</li>
+          <li>Security auditing & safe practices</li>
+          <li>Merchant & user networking features</li>
+        </ul>
+      </section>
+
+      <section class="section" id="sec-3">
+        <h2><span class="section-number">03</span> Cookies & Tracking</h2>
+        <p>
+          We use cookies and tracking technologies to improve functionality,
+          remember preferences, analyze traffic, and support marketing efforts.
+        </p>
+        <ul class="data-grid">
+          <li>Google Analytics Suite</li>
+          <li>Meta Pixel Integrations</li>
+          <li>Newsletter Delivery Metrics</li>
+        </ul>
+      </section>
+
+      <section class="section" id="sec-4">
+        <h2><span class="section-number">04</span> Sharing Information</h2>
+        <p>
+          We may share information with trusted service providers, analytics
+          partners, restaurants, event organizers, and authorities when legally
+          required.
+        </p>
+        <div class="alert-banner">
+          🛡️ We strictly do not sell your personal data to third parties.
+        </div>
+      </section>
+
+      <section class="section" id="sec-5">
+        <h2><span class="section-number">05</span> Public Content</h2>
+        <p>
+          Reviews, photos, videos, and other publicly shared content may appear
+          across the platform and may be used by Savrly for promotional or
+          discovery purposes.
+        </p>
+      </section>
+
+      <section class="section" id="sec-6">
+        <h2><span class="section-number">06</span> Your Rights & Choices</h2>
+        <p>
+          You can access, update, or delete your information, manage
+          notifications, and opt out of marketing communications at any time.
+        </p>
+      </section>
+
+      <section class="section" id="sec-7">
+        <h2><span class="section-number">07</span> Data Security</h2>
+        <p>
+          We implement modern security practices including encryption, access
+          controls, and secure infrastructure to protect your information.
+        </p>
+      </section>
+
+      <section class="section" id="sec-8">
+        <h2><span class="section-number">08</span> Children's Privacy</h2>
+        <p>
+          Savrly is not intended for users under the age of 18. We do not
+          knowingly collect information from minors.
+        </p>
+      </section>
+
+      <section class="section" id="sec-9">
+        <h2><span class="section-number">09</span> Policy Updates</h2>
+        <p>
+          We may update this Privacy Policy periodically. Continued use of the
+          Service after changes means you accept the updated policy.
+        </p>
+      </section>
+
+      <div class="contact-box">
+        <h3>Contact Savrly Legal Support</h3>
+        <p>If you have questions or concerns regarding this Privacy Policy, please reach out to our team.</p>
+        
+        <div class="contact-methods">
+          <a href="mailto:info@savrly.co" class="contact-method">
+            <span class="contact-label">Send an email</span>
+            <span class="contact-value">info@savrly.co</span>
+          </a>
+          <a href="https://www.savrly.co" target="_blank" class="contact-method">
+            <span class="contact-label">Visit Main Site</span>
+            <span class="contact-value">www.savrly.co</span>
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </main>
+
+  <footer class="footer">
+    © 2025 Savrly, Inc. All rights reserved.
+  </footer>
+
+  <button class="floating-button" onclick="window.scrollTo({top:0,behavior:'smooth'})" aria-label="Scroll back to top">
+    ↑
+  </button>
+
+</body>
+</html>
